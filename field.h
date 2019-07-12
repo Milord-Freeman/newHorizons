@@ -1,20 +1,26 @@
 #pragma once
 #include "baseObject.h"
-#include "baseObject.h"
+#include "cell.h"
+#include <vector>
 
 class field : public baseObject {
 public:
-	field() = default;
+	field(sf::RenderWindow * newWindow, int newColumms, int newRows, int newAreaSize);
 	~field() = default;
 
 	void render(void);
 	int getHeight();
 	int getWidth();
+	int getRowsCount();
+	int getColummnsCount();
 	int getAreaSize();
-	void setHeight(int newHeight);
-	void setWidth(int newWidht);
 	void setAreaSize(int newAreaSize);
+	void setRowsCount(int newRowsCount);
+	void setColummnsCount(int newColummnsCount);
+	cell* getCellByPosition(coordinates position);
 
 protected:
-	int height, width, areaSize;
+	int areaSize, colummns, rows;
+	std::vector<cell> cells;
+
 };

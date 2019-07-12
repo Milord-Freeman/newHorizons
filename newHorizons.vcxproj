@@ -165,7 +165,6 @@
   <ItemGroup>
     <ClCompile Include="baseObject.cpp" />
     <ClCompile Include="cell.cpp" />
-    <ClCompile Include="coordinates.cpp" />
     <ClCompile Include="field.cpp" />
     <ClCompile Include="newHorizons.cpp" />
   </ItemGroup>

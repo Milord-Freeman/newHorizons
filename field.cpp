@@ -1,5 +1,15 @@
 #include "field.h"
 
+field::field(sf::RenderWindow* newWindow, int newColumms, int newRows, int newAreaSize)
+{
+	setName("Test snake");
+	setAreaSize(newAreaSize);
+	setColummnsCount(newColumms);
+	setRowsCount(newRows);
+	myWindow = newWindow;
+	myWindow->create(sf::VideoMode(getWidth(), getHeight()), getName());
+}
+
 void field::render(void)
 {
 	for (int c = 0; c < this->getWidth() / this->getAreaSize(); c++) {
@@ -21,29 +31,42 @@ void field::render(void)
 }
 int field::getHeight()
 {
-	return height;
+	return getRowsCount() * getAreaSize();
 }
 int field::getWidth()
 {
-	return width;
+	return getColummnsCount() * getAreaSize();
+}
+int field::getRowsCount()
+{
+	return rows;
+}
+int field::getColummnsCount()
+{
+	return colummns;
 }
 int field::getAreaSize()
 {
 	return areaSize;
 }
-
-void field::setHeight(int newHeight)
-{
-	height = newHeight;
-}
-
-void field::setWidth(int newWidht)
-{
-	width = newWidht;
-}
-
 void field::setAreaSize(int newAreaSize)
 {
 	areaSize = newAreaSize;
+}
+void field::setRowsCount(int newRowsCount)
+{
+	rows = newRowsCount;
+}
+void field::setColummnsCount(int newColummnsCount)
+{
+	colummns = newColummnsCount;
+}
+
+cell* field::getCellByPosition(coordinates position)
+{
+	for (auto& currentCell : cells) {
+		if (currentCell.getPosition() == position) return &currentCell;
+	}
+	return nullptr;
 }
 

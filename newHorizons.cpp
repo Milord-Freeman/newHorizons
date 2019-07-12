@@ -74,47 +74,27 @@ void keys(int& dir) {
 
 int main() {
 
-	field myField;
-	myField.setName("Snake test");
-	myField.setHeight(ROWS * SQUARE_AREA);
-	myField.setWidth(COLUMNS * SQUARE_AREA);
-	myField.setAreaSize(SQUARE_AREA);
+	RenderWindow window;
+	field myField(&window, COLUMNS, ROWS, SQUARE_AREA);
+	//myField.setName("Snake test");
+	
 
-	RenderWindow window(VideoMode(myField.getWidth(), myField.getHeight()), myField.getName());
+	//RenderWindow window(VideoMode(myField.getWidth(), myField.getHeight()), myField.getName());
 	//myField.window.create(VideoMode(myField.getHeight(), myField.getWidth()), myField.getName());
 
-	myField.myWindow = &window;
+	//myField.myWindow = &window;
 
 	while (window.isOpen())
 	{
-		// check all the window's events that were triggered since the last iteration of the loop
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
-			// "close requested" event: we close the window
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
 		window.clear(sf::Color::Black);
 
 		myField.render();
-
-		//for (int c = 0; c < COLUMNS; c++) {
-		//	Vertex vertLine[] =
-		//	{
-		//		Vertex(Vector2f(c * SQUARE_AREA, 0), Color::Green),
-		//		Vertex(Vector2f(c * SQUARE_AREA, myField.getHeight()), Color::Blue)
-		//	};
-		//	window.draw(vertLine, 2, Lines);
-		//};
-		//for (int r = 0; r < ROWS; r++) {
-		//	Vertex horLine[] =
-		//	{
-		//		Vertex(Vector2f(0, r * SQUARE_AREA), Color::Red),
-		//		Vertex(Vector2f(myField.getWidth(), r * SQUARE_AREA), Color::Blue)
-		//	};
-		//	window.draw(horLine, 2, Lines);
-		//};
 
 		RectangleShape rectangle(Vector2f(SQUARE_AREA, SQUARE_AREA));
 		rectangle.setPosition(Vector2f(3 * SQUARE_AREA, 2 * SQUARE_AREA));

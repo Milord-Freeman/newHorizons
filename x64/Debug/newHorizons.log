@@ -1,35 +1,36 @@
 ﻿  baseObject.cpp
   cell.cpp
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\cell.cpp(4,1): error C2509:  render: функция-член не объявлена в "cell"
   field.cpp
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(8,30): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(8,30): warning C4244:         with
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(8,30): warning C4244:         [
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(8,30): warning C4244:             T=float
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(8,30): warning C4244:         ]
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(9,62): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(9,62): warning C4244:         with
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(9,62): warning C4244:         [
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(9,62): warning C4244:             T=float
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(9,62): warning C4244:         ]
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(9,30): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(9,30): warning C4244:         with
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(9,30): warning C4244:         [
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(9,30): warning C4244:             T=float
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(9,30): warning C4244:         ]
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(16,33): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(16,33): warning C4244:         with
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(16,33): warning C4244:         [
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(16,33): warning C4244:             T=float
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(16,33): warning C4244:         ]
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(17,42): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(17,42): warning C4244:         with
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(17,42): warning C4244:         [
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(17,42): warning C4244:             T=float
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(17,42): warning C4244:         ]
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\cell.h(4): message :   см. объявление "cell"
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(18,30): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(18,30): warning C4244:         with
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(18,30): warning C4244:         [
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(18,30): warning C4244:             T=float
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(18,30): warning C4244:         ]
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(19,62): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(19,62): warning C4244:         with
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(19,62): warning C4244:         [
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(19,62): warning C4244:             T=float
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(19,62): warning C4244:         ]
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(19,30): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(19,30): warning C4244:         with
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(19,30): warning C4244:         [
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(19,30): warning C4244:             T=float
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(19,30): warning C4244:         ]
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(26,33): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(26,33): warning C4244:         with
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(26,33): warning C4244:         [
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(26,33): warning C4244:             T=float
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(26,33): warning C4244:         ]
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(27,42): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(27,42): warning C4244:         with
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(27,42): warning C4244:         [
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(27,42): warning C4244:             T=float
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(27,42): warning C4244:         ]
   Создание кода...
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(17,36): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(17,36): warning C4244:         with
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(17,36): warning C4244:         [
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(17,36): warning C4244:             T=float
-C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(17,36): warning C4244:         ]
-  newHorizons.vcxproj -> C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\x64\Debug\newHorizons.exe
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(27,36): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(27,36): warning C4244:         with
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(27,36): warning C4244:         [
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(27,36): warning C4244:             T=float
+C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\field.cpp(27,36): warning C4244:         ]
