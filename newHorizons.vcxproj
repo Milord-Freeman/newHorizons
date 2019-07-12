@@ -163,7 +163,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="baseObject.cpp" />
+    <ClCompile Include="coordinates.cpp" />
     <ClCompile Include="newHorizons.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="baseObject.h" />
+    <ClInclude Include="coordinates.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

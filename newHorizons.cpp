@@ -3,6 +3,10 @@
 #include <stdlib.h>
 #include <string>
 #include <string>
+#include "coordinates.h"
+#include "coordinates.h"
+#include "baseObject.h"
+
 
 #define COLUMNS 30 
 #define ROWS 20
@@ -22,32 +26,6 @@
 
 using namespace sf;
 
-struct coordinates
-{
-	int x, y;
-};
-const bool operator==(const coordinates& left, coordinates& right) {
-	return (left.x == right.x && left.y == right.y);
-}
-
-class baseObject {
-public:
-	baseObject() { position.x = 0; position.y = 0; color = 0; };
-	~baseObject() = default;
-	coordinates getPosition() { return position; };
-	void setPosition(int newX, int newY) { position.x = newX; position.y = newY; }
-	int getColor() { return color; }
-	void setColor(int newColor) { color = newColor; }
-	std::string getName() { return name; };
-	void setName(std::string newName) { name = newName; };
-	virtual void render(void) = 0;
-	RenderWindow * myWindow;
-
-protected:
-	coordinates position;
-	int color;
-	std::string name;
-};
 
 class cell : public baseObject {
 public:
@@ -163,8 +141,8 @@ int main() {
 	myField.setWidth(COLUMNS * SQUARE_AREA);
 	myField.setAreaSize(SQUARE_AREA);
 
-	//myField.window.create(VideoMode(myField.getHeight(), myField.getWidth()), myField.getName());
 	RenderWindow window(VideoMode(myField.getWidth(), myField.getHeight()), myField.getName());
+	//myField.window.create(VideoMode(myField.getHeight(), myField.getWidth()), myField.getName());
 
 	myField.myWindow = &window;
 
