@@ -1,1 +1,3 @@
-﻿  newHorizons.vcxproj -> C:\Users\Milord Freeman\source\repos\newHorizons\newHorizons\x64\Debug\newHorizons.exe
+﻿  LINK : не найден или не выполнена сборка C:\Users\Freeman\Documents\GitHub\newHorizons\x64\Debug\newHorizons.exe при последней инкрементной компоновке; выполняется полная компоновка
+LINK : fatal error LNK1104: не удается открыть файл "sfml-graphics-d.lib"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(725,5): error MSB6006: "link.exe" завершилась с кодом 1104.
