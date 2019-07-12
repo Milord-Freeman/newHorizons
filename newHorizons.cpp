@@ -4,9 +4,9 @@
 #include <string>
 #include <string>
 #include "coordinates.h"
-#include "coordinates.h"
 #include "baseObject.h"
-
+#include "field.h"
+#include "cell.h"
 
 #define COLUMNS 30 
 #define ROWS 20
@@ -26,67 +26,6 @@
 
 using namespace sf;
 
-
-class cell : public baseObject {
-public:
-	void render(void) {};
-	virtual void stepped() = 0;
-
-protected:
-
-};
-
-class field : public baseObject {
-public:
-	field() = default;
-	~field() = default;
-
-	void render(void) {
-		for (int c = 0; c < COLUMNS; c++) {
-			Vertex vertLine[] =
-			{
-				Vertex(Vector2f(c * SQUARE_AREA, 0), Color::Green),
-				Vertex(Vector2f(c * SQUARE_AREA, getHeight()), Color::Blue)
-			};
-			myWindow->draw(vertLine, 2, Lines);
-		};
-		for (int r = 0; r < ROWS; r++) {
-			Vertex horLine[] =
-			{
-				Vertex(Vector2f(0, r * SQUARE_AREA), Color::Red),
-				Vertex(Vector2f(getWidth(), r * SQUARE_AREA), Color::Blue)
-			};
-			myWindow->draw(horLine, 2, Lines);
-		};
-	};
-	int getHeight() { return height; };
-	int getWidth() { return width; };
-	int getAreaSize() { return areaSize; };
-	void setHeight(int newHeight) { height = newHeight; };
-	void setWidth(int newWidht) { width = newWidht; };
-	void setAreaSize(int newAreaSize) { areaSize = newAreaSize; };
-
-protected:
-	int height, width, areaSize;
-};
-
-//class app {
-//public:
-//	int x;
-//	int y;
-//
-//	app() {};
-//	// лучайное распределение
-//	void getncoord(int b) {
-//		x = rand() % 50 * b - b / 2;
-//		y = rand() % 50 * b - b / 2;
-//	}
-//};
-
-struct snake {
-	int x;
-	int y;
-};
 // управление
 
 void keys(int& dir) {

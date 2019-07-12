@@ -24,6 +24,12 @@
     <ClCompile Include="coordinates.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="cell.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="field.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="baseObject.h">
@@ -31,6 +37,12 @@
     </ClInclude>
     <ClInclude Include="coordinates.h">
       <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="cell.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="field.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

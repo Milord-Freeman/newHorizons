@@ -5,7 +5,7 @@ baseObject::baseObject(sf::RenderWindow *newWindow)
 	position.x = 0; 
 	position.y = 0; 
 	color = 0; 
-	myWindow = new sf::RenderWindow;
+	myWindow = newWindow;
 }; 
 baseObject::baseObject()
 {
