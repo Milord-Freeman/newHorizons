@@ -1,13 +1,28 @@
 #pragma once
 #include "baseObject.h"
+#include "coordinates.h"
+
+class field;
 
 class cell : public baseObject {
 public:
-	//void render(void);
-	virtual void stepped() = 0;
+	cell(field* newField, coordinates newPosition);
+	~cell() = default;
+
+	void render();
+	void stepped();
+
+
 	baseObject* getObject();
-	void setObject(baseObject* newObject);
+	void insertObject(baseObject* newObject);
+
+	field* getField();
+	coordinates getPosition();
+	bool isFree();
+
 protected:
-	baseObject* thisObject;
+	coordinates position;
+	baseObject* insertedObject = nullptr;
+	field* myField = nullptr;	
 };
 

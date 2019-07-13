@@ -1,42 +1,4 @@
 #include "baseObject.h"
 
-baseObject::baseObject()
-{
-	position.x = 0; 
-	position.y = 0; 
-	color = 0; 
-	myWindow = NULL;
-	name = "";
-}; 
 
-baseObject::~baseObject() = default;
 
-coordinates baseObject::getPosition()
-{
-	return position;
-};
-
-void baseObject::setPosition(int newX, int newY)
-{
-	position.x = newX; 
-	position.y = newY;
-}
-
-int baseObject::getColor()
-{
-	return color;
-}
-
-void baseObject::setColor(int newColor)
-{
-	color = newColor;
-}
-
-std::string baseObject::getName()
-{
-	return name;
-};
-void baseObject::setName(std::string newName)
-{
-	name = newName;
-};

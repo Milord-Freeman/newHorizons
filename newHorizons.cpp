@@ -1,39 +1,12 @@
 ﻿#include <SFML/Graphics.hpp>
-#include <vector>
-#include <stdlib.h>
-#include <string>
-#include <string>
-#include "coordinates.h"
-#include "baseObject.h"
 #include "field.h"
-#include "cell.h"
 
 #define COLUMNS 30 
 #define ROWS 20
 #define SQUARE_AREA 20
 #define FOOD 1
 
-#define UP 101
-#define DOWN 103
-#define LEFT 100
-#define RIGHT 102
-
-#define BLACK 0, 0, 0, 255
-#define GREY 128, 128, 128
-#define WHITE_GRAY 102, 102, 102
-#define BLUE 0, 255, 255
-#define PURPLE 128, 0, 128
-
 using namespace sf;
-
-// управление
-
-void keys(int& dir) {
-	if (Keyboard::isKeyPressed(Keyboard::Up)) dir = 0;
-	if (Keyboard::isKeyPressed(Keyboard::Right)) dir = 1;
-	if (Keyboard::isKeyPressed(Keyboard::Down)) dir = 2;
-	if (Keyboard::isKeyPressed(Keyboard::Left)) dir = 3;
-};
 
 //void tick(int& snakec, snake* s, int& dir, int b, bool& go, int quadc, int& speed, app* a) {
 //	if (dir >= 0 && dir <= 3) {
@@ -66,14 +39,8 @@ void keys(int& dir) {
 //	if ((s->x<0 || s->x>b * quadc) || (s->y<0 || s->y>b * quadc)) go = true;
 //};
 
-//int size(500);
-//int quadCount = 50;
-//bool isGameOver(false);
-//int countGreen = 0;
-//int countRed = 0;
-
 int main() {
-
+	
 	RenderWindow window;
 	field myField(&window, COLUMNS, ROWS, SQUARE_AREA);
 	//myField.setName("Snake test");
