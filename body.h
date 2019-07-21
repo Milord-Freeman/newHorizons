@@ -1,15 +1,11 @@
 #pragma once
 #include "baseObject.h"
-class body : public baseObject{
 
+class body : public baseObject
+{
 public:
-	body() = default;
-	~body() = default;
-
 	void render();
-	void stepped();
+private:
 
-protected:
-	body* myCell = nullptr;
 };
 

@@ -1,12 +1,13 @@
 ﻿#include <SFML/Graphics.hpp>
 #include "field.h"
+#include "snake.h"
 
 #define COLUMNS 30 
 #define ROWS 20
 #define SQUARE_AREA 20
 #define FOOD 1
 
-using namespace sf;
+#define SNAKELENGTH 4
 
 //void tick(int& snakec, snake* s, int& dir, int b, bool& go, int quadc, int& speed, app* a) {
 //	if (dir >= 0 && dir <= 3) {
@@ -40,54 +41,75 @@ using namespace sf;
 //};
 
 int main() {
-	
-	RenderWindow window;
-	field myField(&window, COLUMNS, ROWS, SQUARE_AREA);
-	//myField.setName("Snake test");
-	
 
-	//RenderWindow window(VideoMode(myField.getWidth(), myField.getHeight()), myField.getName());
-	//myField.window.create(VideoMode(myField.getHeight(), myField.getWidth()), myField.getName());
+	sf::RenderWindow window;
+	window.setVerticalSyncEnabled(true);
 
-	//myField.myWindow = &window;
+	field myField(&window, COLUMNS, ROWS, SQUARE_AREA, FOOD);
+	snake mySnake(&myField, UP, SNAKELENGTH);
+	myField.insertSnake(&mySnake);
+
+	sf::Clock myClock;
 
 	while (window.isOpen())
 	{
 		sf::Event event;
+		sf::Time elapsed = myClock.restart();
 		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
 				window.close();
+			if (event.type == sf::Event::KeyPressed)
+			{
+				switch (event.key.code)
+				{
+				case sf::Keyboard::Left :
+					{
+					mySnake.makeNextStep();
+					break;
+					}
+				case sf::Keyboard::Right :
+					{
+					mySnake.makeNextStep();
+					break;
+					}
+				case sf::Keyboard::Up :
+					{
+					mySnake.makeNextStep();
+					break;
+					}
+				case sf::Keyboard::Down :
+					{
+					mySnake.makeNextStep();
+					break;
+					}
+				}
+			}
 		}
+		
 		window.clear(sf::Color::Black);
+		myClock.restart();
 
 		myField.render();
 
-		RectangleShape rectangle(Vector2f(SQUARE_AREA, SQUARE_AREA));
-		rectangle.setPosition(Vector2f(3 * SQUARE_AREA, 2 * SQUARE_AREA));
-		rectangle.setFillColor(Color::Cyan);
-		window.draw(rectangle);
-
-		int snakeLength = 4;
-		int snakeHead[]{ 4, 5 };
-
-		for (int i = 0; i < snakeLength; i++) {
-			RectangleShape snakePart(Vector2f(SQUARE_AREA, SQUARE_AREA));
-			snakePart.setPosition(Vector2f((snakeHead[0] + i) * SQUARE_AREA, (snakeHead[1]) * SQUARE_AREA));
-			snakePart.setFillColor(Color::Green);
-			window.draw(snakePart);
-		};
-
+		//sf::RectangleShape rectangle(sf::Vector2f(SQUARE_AREA, SQUARE_AREA));
+		//rectangle.setPosition(sf::Vector2f(3 * SQUARE_AREA, 2 * SQUARE_AREA));
+		//rectangle.setFillColor(sf::Color::Cyan);
+		//window.draw(rectangle);
+		//
+		//int snakeLength = 4;
+		//int snakeHead[]{ 4, 5 };
+		//
+		//for (int i = 0; i < snakeLength; i++) {
+		//	sf::RectangleShape snakePart(sf::Vector2f(SQUARE_AREA, SQUARE_AREA));
+		//	snakePart.setPosition(sf::Vector2f((snakeHead[0] + i) * SQUARE_AREA, (snakeHead[1]) * SQUARE_AREA));
+		//	snakePart.setFillColor(sf::Color::Green);
+		//	window.draw(snakePart);
+		//};
+		//
 
 		window.display();
 	}
-
-	//RectangleShape rect(Vector2f(myField.getHeight(), myField.getWidth()));
-	//rect.setOutlineColor(Color::Green);
-	//rect.setOutlineThickness(1);
-
-	//snake s[100];
-	//int snakec = 4;
 
 	//Clock clock;
 

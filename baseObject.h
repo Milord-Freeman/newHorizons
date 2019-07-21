@@ -1,13 +1,26 @@
 #pragma once
 
-class baseObject {
+#include "coordinates.h"
+
+class field;
+
+class baseObject
+{
 public:
 	baseObject() = default;
 	virtual ~baseObject() = default;
-	
-	virtual void render(void) = 0;
-	virtual void stepped() = 0;
-	
-protected:
 
+	virtual void render() = 0;
+
+	coordinates getPosition();
+	void setPosition(coordinates newPosition);
+	void setPosition(int newX, int newY);
+
+	void setField(field* newField);
+	field* getField();
+
+protected:
+	coordinates position = {0, 0};
+	field* myField = nullptr;
 };
+
